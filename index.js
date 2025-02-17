@@ -71,7 +71,7 @@ function update(delta){
                     score++;
                     bullet.$element.remove();
                     alien.$element.attr("src", "./assets/explosion.png");
-                    (new Audio("./assets/explosion" + Math.floor(Math.random()*3) + ".mpeg")).play();
+                    (new Audio("./assets/explosion" + Math.floor(Math.random()*3) + ".mp3")).play();
                     setTimeout(function(){
                         alien.$element.remove();
                     }, 500);
@@ -109,7 +109,7 @@ function update(delta){
 
     $("#spaceship > img").css("transform", "rotate(" + angle + "deg)");
 
-    alienSpawnRate /= 1.0001;
+    alienSpawnRate -= 0.1;
 
 }
 
@@ -242,6 +242,7 @@ $(window).on("resize", function(){
 
 $(document).on("keydown", function(event){
     if(event.key === "Enter"){
+
         startGame();
     }
 });

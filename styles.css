@@ -19,16 +19,12 @@ div{
 
 #bullets > img{
     width: 16px;
-    position: absolute;
-    top: 50%;
     transform: rotate(0deg);
     user-select: none;
 }
 
 #aliens > img{
     width: 32px;
-    position: absolute;
-    top: 50%;
     user-select: none;
 }
 
