@@ -1,0 +1,56 @@
+body{
+    background-image: url(./assets/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+    color:beige;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bullets > img{
+    width: 16px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(0deg);
+    user-select: none;
+}
+
+#aliens > img{
+    width: 32px;
+    position: absolute;
+    top: 50%;
+    user-select: none;
+}
+
+h1{
+    padding: 5%;
+    text-align: center;
+    user-select: none;
+}
+
+#spaceship > img{
+    user-select: none;
+    width: 48px;
+    position: absolute;
+    transform: rotate(0deg);
+}
+
+footer {
+    user-select: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+}
+
+
