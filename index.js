@@ -142,6 +142,7 @@ function startGame(){
     if(!gameStarted){
         $("#bullets").html("");
         $("#aliens").html("");
+        alienSpawnRate = 3000;
         score = 0;
         aliens = [];
         bullets = [];
