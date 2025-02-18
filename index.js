@@ -259,7 +259,7 @@ $(document).on("click", function(mouse){
     if(gameStarted){
         var bullet = new Bullet(x, y, mouse.pageX, mouse.pageY);
         bullets.push(bullet);
-        (new Audio("./assets/laser.mp3")).play();
+        (new Audio("./assets/laser" + Math.floor(Math.random() * 2) + ".mp3")).play();
     }
 })
 
