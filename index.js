@@ -134,7 +134,12 @@ function render(){
     if(!gameStarted){
         $("#spaceship > img").attr("src", "./assets/explosion.png");
         spaceshipExploded = true;
-        $("h1").html("Score: " + score + "<br><br>You Lost!<br><br>Press Enter To Play Again");
+        // Check if the user is on a mobile device
+        if (/Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent)) {
+            $("h1").html("Score: " + score + "<br><br>You Lost!<br><br>Press Anywhere to Play Again");
+        } else {
+            $("h1").html("Score: " + score + "<br><br>You Lost!<br><br>Press Enter to Play Again");
+        }
     }
 }
 
@@ -242,10 +247,17 @@ $(window).on("resize", function(){
 
 $(document).on("keydown", function(event){
     if(event.key === "Enter"){
-
         startGame();
     }
 });
+
+// Check if the user is on a mobile device
+if (/Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent)) {
+    $("h1").text("Press Anywhere To Start");
+    $(document).on("click touchstart", function() {
+        startGame();
+    });
+}
 
 $(document).on("mousemove", function(mouse){
     mouseX = mouse.pageX;
